@@ -23,4 +23,9 @@ npm install angular2-materialize --save
 Y por ultimo se iniciara el proyecto:  
 ng serve  
   
-Ahora podra ver la página web en http://localhost:4200/
+Ahora podra ver la página web en http://localhost:4200/  
+  
+### Integrates
+*Miguel Rodríguez Mendoza - 20171020033  
+Daniel Montiel Rodríguez - 20171020049  
+Fabio Ortiz Gasca - 20171020051*
