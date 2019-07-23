@@ -1,0 +1,63 @@
+<!--
+<div id="allPage">
+    <div id="pageContent">
+        <div id="pageSubContent">
+            <div id="logInForm">
+                <form>
+                    <input type="text" [(ngModel)]="user.nick" placeholder="Ingresar nombre de Usuario" name="nick">
+                    <input type="text" [(ngModel)]="user.password" placeholder="Ingresar Contraseña" name="password">
+                </form>
+            </div>
+        </div>
+        <div id="bottomMenu">
+            <button id="guest" routerLink="/central/any">
+                Jugar como invitado
+            </button>
+
+            <button id="send" (click)="checkRegister()">
+                Ingresar
+            </button>
+
+            <button id="registration" routerLink="/register">
+                Registrarse
+            </button>
+        </div>
+    </div>
+</div>
+-->
+<br>
+<br>
+<div class="container">
+    <div class="row center">
+        <div class="card blue-grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Iniciar Sesión</span>
+                <form>
+                    <div class="input-field">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input name="nick" id="user" type="text" class="validate" [(ngModel)]="user.nick">
+                        <label for="user">Usuario</label>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">vpn_key</i>
+                        <input name="password" id="password" type="password" class="validate" [(ngModel)]="user.password">
+                        <label for="password">Password</label>
+                    </div>
+                </form>
+                <button id="send" type="submit" class="btn waves-effect waves-light submit-btn" (click)="checkRegister()">Iniciar Sesión</button>
+            </div>
+        </div>
+        <div class="card blue-grey lighten-5">
+            <div class="card-content">
+                <div class="row">
+                    <div class="col s6 m6 l6">
+                        <button routerLink="/games-library/any" id="send" type="submit" class="btn waves-effect waves-light submit-btn">Invitado</button>
+                    </div>
+                    <div class="col s6 m6 l6">
+                        <button routerLink="/register" id="send" type="submit" class="btn waves-effect waves-light submit-btn">Registrarse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

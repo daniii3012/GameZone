@@ -1,0 +1,358 @@
+<div class="center">
+    <div *ngIf="show_penguin">
+        <!--<a class="waves-effect waves-light btn" (click)="score();" onclick="getScore();">Score</a>-->
+    </div>
+
+    <div *ngIf="show_arkanoid">
+        <section>
+            <canvas id="myCanvas" width="480" height="320" style="background:url('../assets/games/arkanoid/Images/espacio.gif'), url('../assets/games/arkanoid/Images/fondo3.jpg');"></canvas>
+        </section>
+        <button onclick="reload()">Volver a jugar</button>
+    </div>
+
+    <div *ngIf="show_arkanoid_old">
+        <canvas id="canvas" style="width: 700px; height: 400px; background-image: url('../assets/games/arkanoid_old/Imagenes/fondo.jpg');"></canvas>
+        <div id="modelo">
+
+            <button id="inicio">
+                        <img src="../assets/games/arkanoid_old/Imagenes/jugar.jpg"/>
+                    </button>
+
+        </div>
+    </div>
+
+    <div *ngIf="show_chicken">
+        <section style="background: url('../assets/games/chicken/imagenes/trasparente.png');">
+            <canvas id="mi_canvas" width="640" height="480" style="background: url('../assets/games/chicken/imagenes/fondo.png');">
+                            Tu navegador no es compatible
+                        </canvas>
+        </section>
+        <section style="background: url('../assets/games/chicken/imagenes/trasparente.png');">
+            <div id="popup" style="display: none;">
+                <div class="content-popup">
+                    <div class="close">
+                        <a href="#" id="close"><img src="../assets/games/chicken/imagenes/close.png" /></a>
+                    </div>
+                    <div>
+                        <h2>Teclas de juego</h2>
+                        <img src="../assets/games/chicken/imagenes/teclado.png" />
+                        <h2>Creditos</h2>
+                        <p>Alejandro Paolo Daza Corredor</p>
+                        <p>UNIR</p>
+                        <p>Computación en el Cliente</p>
+                    </div>
+                </div>
+            </div>
+            <h1>La Gallina</h1>
+            <button id="instrucciones">Ver Instrucciones</button><br>
+            <button id="iniciar">Comenzar</button>
+        </section>
+        <audio id="pierde">
+                        <source src="../assets/games/chicken/sonidos/pierde_vida.mp3" type="audio/mpeg">
+                        Tu navegador no es compatible
+                    </audio>
+
+        <img id="abajo" src="../assets/games/chicken/imagenes/kika.png" />
+        <img id="arriba" src="../assets/games/chicken/imagenes/kika2.png" />
+        <img id="calaca_1" src="../assets/games/chicken/imagenes/calaca_child.png" />
+        <img id="calaca_2" src="../assets/games/chicken/imagenes/calaca_girl.png" />
+    </div>
+
+    <div *ngIf="show_snake">
+        <section style="background: url('../assets/games/snake/imagenes/trasparente.png');">
+            <canvas id="mi_canvas" width="640" height="480" style="background:url('../assets/games/snake/imagenes/fondo.jpg');">
+                                Tu navegador no es compatible
+                            </canvas>
+        </section>
+        <section style="background: url('../assets/games/snake/imagenes/trasparente.png');">
+            <div id="popup" style="display: none;">
+                <div class="content-popup">
+                    <div class="close">
+                        <a href="#" id="close"><img src="../assets/games/snake/imagenes/close.png" /></a>
+                    </div>
+                    <div>
+                        <h2>Teclas de juego</h2>
+                        <img src="../assets/games/snake/imagenes/teclado.png" />
+                        <h2>Creditos</h2>
+                        <p>Kevin Malaver</p>
+                        <p>Universidad Distrital</p>
+                        <p>Ingenieria de Sistemas</p>
+                    </div>
+                </div>
+            </div>
+            <h1>Snake</h1>
+            <button id="instrucciones">Ver Instrucciones</button><br>
+            <button id="iniciar">Iniciar</button>
+        </section>
+        <audio id="pierde">
+            <source src="../assets/games/snake/sonidos/Fondo.ogg" type="audio/ogg">
+            <source src="../assets/games/snake/sonidos/Fondo.mp3" type="audio/mpeg">
+            <source src="../assets/games/snake/sonidos/Fondo.wav" type="audio/wav">
+            Tu navegador no es compatible
+        </audio>
+
+        <img id="abajo" src="../assets/games/snake/imagenes/snake.png" />
+        <img id="arriba" src="../assets/games/snake/imagenes/snake.png" />
+        <img id="salto" src="../assets/games/snake/imagenes/snake.png" />
+        <img id="sentado" src="../assets/games/snake/imagenes/snake.png" />
+        <img id="calaca_1" src="../assets/games/snake/imagenes/manzana.png" />
+    </div>
+
+    <div *ngIf="show_buscaminas">
+        <section class="seccionsup">
+            <ul class="superior">
+                <li class="tiempo"><span id="countdown"></span></li>
+                <li><img id="cara" src="../assets/games/Buscaminas/images/smile.png"></li>
+                <li class="puntos">Puntos: <span id="puntaje">0</span></li>
+            </ul>
+        </section>
+        <canvas id="canvas" width="900" height="480"></canvas>
+    </div>
+
+    <div *ngIf="show_gallinita">
+        <section style="background:url('../assets/games/Gallinita/imagenes/trasparente.png');">
+            <canvas id="mi_canvas" width="640" height="560" style="background:url('../assets/games/Gallinita/imagenes/Road.png');">
+                        Tu navegador no es compatible
+                    </canvas>
+        </section>
+
+        <!--Este es el cuadro de Instrucciones e Inicio-->
+        <section style="background:url('../assets/games/Gallinita/imagenes/trasparente.png');">
+            <!--Este es el desplegable de Instrucciones y Creditos-->
+            <div id="popup" style="display: none;">
+                <div class="content-popup">
+                    <div class="close">
+                        <a href="#" id="close"><img src="../assets/games/Gallinita/imagenes/close.png" /></a>
+                    </div>
+                    <div>
+                        <h2>Teclas de juego</h2>
+                        <img src="../assets/games/Gallinita/imagenes/teclado.png" />
+                        <h2>Creditos</h2>
+                        <p>Juan Camilo Martinez</p>
+                        <p>Omar Alejandro Espitia Sanchez</p>
+                        <p>Gabriel Esteban Castillo Ramirez</p>
+                        <p>Ref: Alejandro Paolo Daza Corredor</p>
+                        <p>UNIR</p>
+                        <p>Computación en el Cliente</p>
+                    </div>
+                </div>
+            </div>
+
+            <h1>La Gallina come Maiz</h1>
+            <button id="instrucciones">Ver Instrucciones</button><br>
+            <button id="iniciar">Iniciar</button>
+        </section>
+
+        <!--Audios propios de la gallina-->
+        <audio id="nuevaVida">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_Inicio.ogg" type="audio/ogg">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_Inicio.mp3" type="audio/mpeg">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_Inicio.wav" type="audio/wav">
+                    Tu navegador no es compatible
+        </audio>
+
+        <audio id="pierde">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_pierde_vida.ogg" type="audio/ogg">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_pierde_vida.mp3" type="audio/mpeg">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_pierde_vida.wav" type="audio/wav">
+                    Tu navegador no es compatible
+        </audio>
+
+        <audio id="come">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_come.ogg" type="audio/ogg">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_come.mp3" type="audio/mpeg">
+                    <source src="../assets/games/Gallinita/sonidos/Chicken_come.wav" type="audio/wav">
+                    Tu navegador no es compatible
+        </audio>
+
+        <!--Imagenes para la gallina-->
+        <img id="abajo" src="../assets/games/Gallinita/imagenes/Chicken1.png" />
+        <img id="izquierda" src="../assets/games/Gallinita/imagenes/Chicken2.png" />
+        <img id="derecha" src="../assets/games/Gallinita/imagenes/Chicken3.png" />
+        <img id="arriba" src="../assets/games/Gallinita/imagenes/Chicken4.png" />
+        <img id="muerto" src="../assets/games/Gallinita/imagenes/tumba.png" />
+
+        <!--Imagenes para los autos-->
+        <img id="auto_1d" src="../assets/games/Gallinita/imagenes/Auto1_der.png" />
+        <img id="auto_1i" src="../assets/games/Gallinita/imagenes/Auto1_izq.png" />
+        <img id="auto_2d" src="../assets/games/Gallinita/imagenes/Auto2_der.png" />
+        <img id="auto_2i" src="../assets/games/Gallinita/imagenes/Auto2_izq.png" />
+        <img id="auto_3d" src="../assets/games/Gallinita/imagenes/Auto3_der.png" />
+        <img id="auto_3i" src="../assets/games/Gallinita/imagenes/Auto3_izq.png" />
+        <img id="auto_4d" src="../assets/games/Gallinita/imagenes/Auto4_der.png" />
+        <img id="auto_4i" src="../assets/games/Gallinita/imagenes/Auto4_izq.png" />
+        <img id="auto_5d" src="../assets/games/Gallinita/imagenes/Auto5_der.png" />
+        <img id="auto_5i" src="../assets/games/Gallinita/imagenes/Auto5_izq.png" />
+        <img id="auto_6d" src="../assets/games/Gallinita/imagenes/Auto6_der.png" />
+        <img id="auto_6i" src="../assets/games/Gallinita/imagenes/Auto6_izq.png" />
+        <img id="auto_7d" src="../assets/games/Gallinita/imagenes/Auto7_der.png" />
+        <img id="auto_7i" src="../assets/games/Gallinita/imagenes/Auto7_izq.png" />
+
+        <!--Imagen para la semilla-->
+        <img id="maiz" src="../assets/games/Gallinita/imagenes/maiz.png" />
+    </div>
+
+    <div *ngIf="show_chicken_road">
+        <section style="background:url('../assets/games/Gallinita1/imagenes/trasparente.png');">
+            <canvas id="mi_canvas" width="640" height="480" style="background:url('../assets/games/Gallinita1/imagenes/fondo.png');">
+                        Tu navegador no es compatible
+                    </canvas>
+        </section>
+        <section style="background:url('../assets/games/Gallinita1/imagenes/trasparente.png');">
+            <div id="popup" style="display: none;">
+                <div class="content-popup">
+                    <div class="close">
+                        <a href="#" id="close"><img src="../assets/games/Gallinita1/imagenes/close.png" /></a>
+                    </div>
+                    <div>
+                        <h2>Teclas de juego</h2>
+                        <img src="../assets/games/Gallinita1/imagenes/teclado.png" />
+                        <h2>Creditos</h2>
+                        <p>Alejandro Paolo Daza Corredor</p>
+                        <p>UNIR</p>
+                        <p>Computación en el Cliente</p>
+                    </div>
+                </div>
+            </div>
+            <h1>Chicken Road</h1>
+            <button id="instrucciones">Ver Instrucciones</button><br>
+            <button id="iniciar">Iniciar</button>
+        </section>
+        <audio id="pierde">
+                    <source src="../assets/games/Gallinita1/sonidos/pierde_vida.ogg" type="audio/ogg">
+                    <source src="../assets/games/Gallinita1/sonidos/pierde_vida.mp3" type="audio/mpeg">
+                    <source src="../assets/games/Gallinita1/sonidos/pierde_vida.wav" type="audio/wav">
+                    Tu navegador no es compatible
+                </audio>
+
+        <img id="abajo" src="../assets/games/Gallinita1/imagenes/pollo1.png" />
+        <img id="arriba" src="../assets/games/Gallinita1/imagenes/pollo1_arr.png" />
+        <img id="derecha" src="../assets/games/Gallinita1/imagenes/pollo1_der.png" />
+        <img id="izquierda" src="../assets/games/Gallinita1/imagenes/pollo1_izq.png" />
+        <img id="muerto" src="../assets/games/Gallinita1/imagenes/pollo1_mue.png" />
+        <img id="choque" src="../assets/games/Gallinita1/imagenes/pollo1_cho.png" />
+
+        <img id="auto1_der" src="../assets/games/Gallinita1/imagenes/auto1_der.png" />
+        <img id="auto2_der" src="../assets/games/Gallinita1/imagenes/auto2_der.png" />
+        <img id="auto3_der" src="../assets/games/Gallinita1/imagenes/auto3_der.png" />
+        <img id="auto4_der" src="../assets/games/Gallinita1/imagenes/auto4_der.png" />
+    </div>
+
+    <div *ngIf="show_pollhor">
+        <section style="background:url('../assets/games/Gallinita2/imagenes/trasparente.png');">
+            <canvas id="mi_canvas" width="640" height="480" style="background:url('../assets/games/Gallinita2/imagenes/carretera.png');">
+                        Tu navegador no es compatible
+                    </canvas>
+        </section>
+        <section style="background:url('../assets/games/Gallinita2/imagenes/trasparente.png');">
+            <div id="popup" style="display: none;">
+                <div class="content-popup">
+                    <div class="close">
+                        <a href="#" id="close"><img src="../assets/games/Gallinita2/imagenes/close.png" /></a>
+                    </div>
+                    <div>
+                        <h2>Teclas de juego</h2>
+                        <img src="../assets/games/Gallinita2/imagenes/teclado.png" />
+                        <h2>Creditos</h2>
+                        <p>Sebastian Ortiz</p>
+                        <p>UNIR</p>
+                        <p>Computación en el Cliente</p>
+                    </div>
+                </div>
+            </div>
+            <h1>Gallina</h1>
+            <button id="instrucciones">Ver Instrucciones</button><br>
+            <button id="iniciar">Iniciar</button>
+        </section>
+        <audio id="pierde">
+                    
+                    <source src="../assets/games/Gallinita2/sonidos/muere.mp3" type="audio/mpeg">
+                    <source src="../assets/games/Gallinita2/sonidos/pierde_vida.wav" type="audio/wav">
+                    Tu navegador no es compatible
+                </audio>
+
+        <img id="abajo" src="../assets/games/Gallinita2/imagenes/gallina.png" />
+        <img id="arriba" src="../assets/games/Gallinita2/imagenes/gallina.png" />
+        <img id="salto" src="../assets/games/Gallinita2/imagenes/gallina.png" />
+        <img id="sentado" src="../assets/games/Gallinita2/imagenes/muerto.png" />
+        <img id="carro" src="../assets/games/Gallinita2/imagenes/carro.png" />
+        <img id="camion" src="../assets/games/Gallinita2/imagenes/camion.png" />
+    </div>
+
+    <div *ngIf="show_pinball">
+        <canvas id="myCanvas" width="800" height="320"></canvas>
+    </div>
+
+    <div *ngIf="show_twicecard">
+        <div id="tablero" class="tablero" style="opacity: 0.3;
+        width: 600px;
+        height: 600px;
+        margin-left:330px;
+        font-size: 40px;
+        text-align: center;">
+            <table>
+
+                <tr>
+                    <td id="0" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="1" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="2" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="3" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                </tr>
+
+
+                <tr>
+                    <td id="4" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="5" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="6" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="7" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                </tr>
+
+
+                <tr>
+                    <td id="8" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="9" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="10" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="11" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                </tr>
+
+
+                <tr>
+                    <td id="12" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="13" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="14" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                    <td id="15" class="letra" onclick="girarCarta()" data-valor="valor">?</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="3">
+                        Intentos:
+                    </td>
+                    <td colspan="1" id="try" data-valor="0">
+                        0
+                    </td>
+                </tr>
+
+
+            </table>
+
+
+        </div>
+
+        <div class="centrar">
+            <input type="button" class="button" value="INICIO" onclick="iniciarJuego()" />
+            <input type="button" class="button" value="REINICIAR" onclick="location.reload()" />
+
+        </div>
+    </div>
+
+    <div *ngIf="show_other">
+        <div class="card blue-grey lighten-5">
+            <div class="card-content">
+                <span class="card-title">Juego no encontrado</span>
+            </div>
+        </div>
+    </div>
+    <a class="waves-effect waves-light btn" onclick="history.back()">Volver</a>
+</div>
